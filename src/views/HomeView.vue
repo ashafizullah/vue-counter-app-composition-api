@@ -13,13 +13,14 @@
     <p>This counter is {{ oddOrEven }}</p>
     <div class="edit">
       <h4>Edit counter title:</h4>
-      <input type="text" v-model="counterData.title">
+      <input type="text" v-model="counterData.title" v-autofocus>
     </div>
   </div>
 </template>
 
 <script setup>
   import { reactive, computed, watch, onMounted } from 'vue'
+  import { vAutofocus } from '@/directives/vAutofocus'
 
   const appTitle = 'My Amazing Counter App'
 
